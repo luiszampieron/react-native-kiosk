@@ -1,7 +1,7 @@
 {
   "name": "react-native-kiosk",
   "version": "0.1.0",
-  "description": "a simple kiosk mode in react-native",
+  "description": "A simple kiosk mode for Android in react native",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
   "types": "lib/typescript/index.d.ts",
@@ -36,13 +36,13 @@
     "ios",
     "android"
   ],
-  "repository": "https://github.com/luiszampieron/react-native-kiosk-mode/react-native-kiosk",
-  "author": "Luis Zampieron <luisfernando@digisat.com.br> (https://github.com/luiszampieron/react-native-kiosk-mode)",
+  "repository": "https://github.com/luiszampieron/react-native-kiosk",
+  "author": "Luis Zampieron <luisfernandozampieron@gmail.com> (https://github.com/luiszampieron/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/luiszampieron/react-native-kiosk-mode/react-native-kiosk/issues"
+    "url": "https://github.com/luiszampieron/react-native-kiosk/issues"
   },
-  "homepage": "https://github.com/luiszampieron/react-native-kiosk-mode/react-native-kiosk#readme",
+  "homepage": "https://github.com/luiszampieron/react-native-kiosk#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
@@ -145,7 +145,5 @@
       ]
     ]
   },
-  "dependencies": {
-    "lodash": "^4.17.21"
-  }
+  "dependencies": {}
 }
