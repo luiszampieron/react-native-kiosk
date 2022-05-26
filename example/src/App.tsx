@@ -1,31 +1,64 @@
-import * as React from 'react';
+import React from 'react';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import Kiosk from 'react-native-kiosk';
 
-import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from 'react-native-kiosk';
+const App: React.FC = () => {
+  const handleFullscreen = () => {
+    Kiosk.fullscreen();
+  };
 
-export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
-
-  React.useEffect(() => {
-    multiply(3, 7).then(setResult);
-  }, []);
+  const handleExitFullscreen = () => {
+    Kiosk.exitFullscreen();
+  };
 
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <Text style={styles.title}>Kiosk Mode</Text>
+
+      <TouchableOpacity
+        style={styles.containerButton}
+        onPress={handleFullscreen}
+      >
+        <Text style={styles.text}>Enter</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity
+        style={styles.containerButton}
+        onPress={handleExitFullscreen}
+      >
+        <Text style={styles.text}>Exit</Text>
+      </TouchableOpacity>
     </View>
   );
-}
+};
+
+export default App;
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
     justifyContent: 'center',
+    alignItems: 'center',
   },
-  box: {
-    width: 60,
-    height: 60,
-    marginVertical: 20,
+
+  title: {
+    fontSize: 40,
+    fontWeight: 'bold',
+  },
+
+  containerButton: {
+    backgroundColor: '#035afc',
+    width: '60%',
+    height: 40,
+    justifyContent: 'center',
+    alignItems: 'center',
+    elevation: 5,
+    borderRadius: 10,
+    marginBottom: 10,
+  },
+
+  text: {
+    color: '#FFFFFF',
+    fontSize: 20,
   },
 });
